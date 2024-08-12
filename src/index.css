@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: whitesmoke;
+  color: #222;
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+}
+
+.wrapper {
+  width: 1280px;
+  margin: 50px auto;
+
+
+}
+
+header .Logo {
+  font-weight: 600;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .presentation {
+  margin: 50px 0;
+  background: url('./img/headerphoto.jpg') no-repeat;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+  background-color: azure;
+  position: relative;
+}
+
+header .presentation::after {
+  content: 'Meilleur tableaux';
+  position: absolute;
+  top: 100;
+  left: 50%;
+  width: auto;
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(178, 236, 19);
+  display: inline-block;
+}
+
+footer {
+  background-color: #222;
+  color: whitesmoke;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 100px;
+}
+
+header ul.menu, .order-count {
+  float: right;
+  list-style: none;
+
+}
+
+header ul.menu li{
+  display: inline-block;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: opacity 500ms;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main .item {
+  width: 30%;
+  margin-bottom: 50px;
+  background: rgb(170, 169, 169);
+  position: relative;
+  padding-bottom: 20px;
+}
+
+main .item img, .full-item img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  transition: transform 500ms easy;
+  cursor: pointer;
+}
+
+main .item img:hover , .full-item img:hover {
+  transform: scale(1.05);
+
+}
+
+main h2, .full-item h2,
+main p, .full-item p,
+main b, .full-item b {
+  margin: 10px 20px;
+  color: #333;
+
+}
+
+main b, .full-item b {
+  color: green;
+}
+
+main .add-to-cart,
+.full-item .add-to-cart {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: red;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+main .add-to-cart:hover,
+.full-item .add-to-cart:hover {
+  transform: scale(1.5) translateY(-5px);
+  transition: transform 500ms easy;
+}
+
+header .panier {
+  float: right;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+  ;
+}
+
+header .panier:hover,
+header .panier.active {
+  color: red;
+  transform: scale(1.5);
+}
+
+header .cart {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 450px;
+  background-color: white;
+  z-index: 1000;
+
+  padding: 20px;
+  padding-bottom: 0;
+
+}
+
+header {
+  position: relative;
+}
+
+header .cart:hover,
+header .cart.active {
+  color: red;
+
+}
+
+header .cart .item {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+
+
+
+}
+
+header .cart .item img {
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+}
+
+header .cart .item h2 {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  margin: 10px;
+}
+
+header .cart .item p {
+  color: rgb(0, 0, 0);
+  margin: 10px;
+}
+
+header .cart .item b {
+  color: green;
+  margin: 10px;
+  font-weight: 600;
+}
+
+header .cart .vide h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+
+}
+
+header .cart .delete {
+  color: #333;
+  float: right;
+  cursor: pointer;
+  transition: color 500ms;
+  position: relative;
+  top: -30px;
+}
+
+header .cart .delete:hover {
+  color: red;
+  transform: scale(1.5);
+}
+
+header .cart .prixtotale {
+  float: right;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+
+}
+
+.categories div {
+  display: inline-block;
+  margin-bottom: 25px;
+  background-color: wheat;
+  border-radius: 200px;
+  padding: 10px 20px;
+  margin-right: 25px;
+  margin-left: 120px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 500ms;
+}
+
+.categories div:hover {
+  border: 1px solid red;
+  transform: scale(1.1);
+}
+
+.full-item{
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(12, 12, 12, 0.452);
+z-index: 9999;
+overflow: auto;
+
+}
+
+.full-item > div {
+  width: 400px;
+  margin: 10% auto;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 10px;
+  position: relative;
+  
+}
+
